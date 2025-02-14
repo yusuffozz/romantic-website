@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -60,37 +59,41 @@
       color: #f0e68c;
       margin-top: 10px;
     }
+    .music {
+      margin-top: 20px;
+    }
   </style>
 </head>
 <body>
   <div class="container" id="password-screen">
-    <h1>Hoş Geldin Aşkım 💖</h1>
+    <h1>Hoş Geldin Sevgilim💖</h1>
     <p>Lütfen giriş yapmak için şifreyi gir.</p>
     <div class="input-group">
       <input type="password" id="password" placeholder="Şifre" />
     </div>
     <button onclick="checkPassword()">Giriş Yap</button>
-    <p class="hint">İpucu: sağanak</p>
+    <p class="hint">İpucu: biz mi söyleyek la bul kendin :D</p>
   </div>
 
   <div class="hidden" id="main-content">
     <h1>Seni Seviyorum ❤️</h1>
     <p>Bu site senin için hazırlandı!</p>
     <div class="gallery">
-      <img src="https://via.placeholder.com/300x200" alt="Fotoğraf 1">
-      <img src="https://via.placeholder.com/300x200" alt="Fotoğraf 2">
-      <img src="https://via.placeholder.com/300x200" alt="Fotoğraf 3">
+      <img src="https://raw.githubusercontent.com/yusuffozz/romantik-website/main/images/foto1.jpg" alt="Sevgili Foto 1">
+      <img src="https://raw.githubusercontent.com/yusuffozz/romantik-website/main/images/foto2.jpg" alt="Sevgili Foto 2">
+      <img src="https://raw.githubusercontent.com/yusuffozz/romantik-website/main/images/foto3.jpg" alt="Sevgili Foto 3">
     </div>
-    <audio autoplay loop>
-      <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mp3">
-      Tarayıcınız ses çalmayı desteklemiyor.
-    </audio>
+    <div class="music">
+      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1xSk0woOVMd5tJxZTL4PuN?utm_source=generator" 
+              width="100%" height="80" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" 
+              loading="lazy"></iframe>
+    </div>
   </div>
 
   <script>
     function checkPassword() {
       const password = document.getElementById('password').value;
-      if (password === '01.05.2024') { // Şifreyi buradan değiştirebilirsin
+      if (password === '01.05.2024') {
         document.getElementById('password-screen').classList.add('hidden');
         document.getElementById('main-content').classList.remove('hidden');
       } else {
