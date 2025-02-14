@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sevgilim İçin</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      color: #fff;
+      text-align: center;
+      overflow: hidden;
+    }
+    .hidden {
+      display: none;
+    }
+    .container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      max-width: 600px;
+    }
+    .input-group {
+      margin: 20px 0;
+    }
+    input[type="password"] {
+      padding: 10px;
+      width: 80%;
+      border: none;
+      border-radius: 25px;
+      outline: none;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 20px;
+      background: #ff6f61;
+      color: #fff;
+      border: none;
+      border-radius: 25px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #ff4a3d;
+    }
+    .gallery img {
+      width: 100%;
+      max-width: 300px;
+      margin: 10px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .hint {
+      font-size: 14px;
+      color: #f0e68c;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="password-screen">
+    <h1>Hoş Geldin Aşkım 💖</h1>
+    <p>Lütfen giriş yapmak için şifreyi gir.</p>
+    <div class="input-group">
+      <input type="password" id="password" placeholder="Şifre" />
+    </div>
+    <button onclick="checkPassword()">Giriş Yap</button>
+    <p class="hint">İpucu: sağanak</p>
+  </div>
+
+  <div class="hidden" id="main-content">
+    <h1>Seni Seviyorum ❤️</h1>
+    <p>Bu site senin için hazırlandı!</p>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/300x200" alt="Fotoğraf 1">
+      <img src="https://via.placeholder.com/300x200" alt="Fotoğraf 2">
+      <img src="https://via.placeholder.com/300x200" alt="Fotoğraf 3">
+    </div>
+    <audio autoplay loop>
+      <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mp3">
+      Tarayıcınız ses çalmayı desteklemiyor.
+    </audio>
+  </div>
+
+  <script>
+    function checkPassword() {
+      const password = document.getElementById('password').value;
+      if (password === '01.05.2024') { // Şifreyi buradan değiştirebilirsin
+        document.getElementById('password-screen').classList.add('hidden');
+        document.getElementById('main-content').classList.remove('hidden');
+      } else {
+        alert('Yanlış şifre, tekrar dene!');
+      }
+    }
+  </script>
+</body>
+</html>
